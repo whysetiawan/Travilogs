@@ -94,7 +94,8 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 5,
     backgroundColor: colors.primary,
-    width:'25%',
+    paddingHorizontal: deviceWidth * 0.05,
+    paddingVertical: deviceHeight * 0.0125,
     height: deviceHeight * 0.06,
     alignSelf:'center',
   },
@@ -110,5 +111,82 @@ export default styles = StyleSheet.create({
   registrationTextInput: {
     height: deviceHeight * 0.058,
     fontFamily: Avenir
-  }
+  },
+  dateRegistrationTextInput: {
+    height: deviceHeight * 0.058,
+    fontFamily: Avenir,
+    width:'20%'
+  },
+  squareImagePicker: {
+    width:'30%',
+    height: deviceHeight * 0.17,
+    backgroundColor: '#CCCCCC'
+  },
+  personalDataRegisterContainer1: {
+    padding:'5%',
+    marginBottom:'15%',
+    marginTop:'5%'
+  },
+  personalDateRegisterForm: {
+    width:'70%',
+    paddingLeft:'2%'
+  },
+  personalPickerContainer: {
+    borderBottomWidth:1,
+    borderBottomColor: colors.primary,
+    width: '70%'
+  },
+  smallItalicText :{
+    fontStyle: 'italic',
+    fontSize: normalize(12),
+    fontFamily: 'Avenir Medium',    
+  },
+  signinYellowButton: {
+    backgroundColor: colors.yellow,
+    borderWidth:1,
+    borderColor: colors.primary,
+    borderRadius: 4,
+    alignItems:'center',
+    justifyContent:'center',
+    paddingHorizontal: deviceWidth * 0.05,
+    paddingVertical: deviceHeight * 0.017,
+  },
+  signinBlueButton: {
+    backgroundColor: colors.primary,
+    borderRadius: 4,
+    alignItems:'center',
+    justifyContent:'center',
+    paddingHorizontal: deviceWidth * 0.05,
+    paddingVertical: deviceHeight * 0.017,
+    marginBottom:'3%'
+  },
+  signinRedButton: {
+    backgroundColor: 'red',
+    borderRadius: 4,
+    alignItems:'center',
+    justifyContent:'center',
+    paddingHorizontal: deviceWidth * 0.05,
+    paddingVertical: deviceHeight * 0.017,
+    marginBottom:'3%'    
+  },
+  personalPickerStyle: {
+    height: deviceHeight * 0.04,
+    backgroundColor: 'transparent',
+    width:'90%'
+  },
+  corporatePickerContainer:{
+    borderBottomWidth:1,
+    borderBottomColor: colors.primary,
+    width: '80%'    
+  },
+  corporatePickerStyle: {
+    height: deviceHeight * 0.04,
+    backgroundColor: 'transparent',
+    width:'100%'    
+  },
+  scrollingCardPage : {
+    marginHorizontal:'1.5%',
+    borderRadius:7,
+    marginBottom:'3%'
+  },
 })

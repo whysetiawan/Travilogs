@@ -30,6 +30,7 @@ export default class Menu extends Component {
   })
 
   render() {
+    const { navigate } = this.props.navigation
     return (
       <View style={[styles.centerContainer, styles.bgPrimary ]}>
         <Image
@@ -39,15 +40,15 @@ export default class Menu extends Component {
           resizeMode='contain'
           />
         <Button
-          onPress={() => alert('worked')}
+          onPress={() => navigate('Signin')}
           style={styles.whiteRoundButton}
         >
           <Text style={styles.blueButtonText} >Sign In</Text>
         </Button>
 
-        <Text style={[styles.normalItalicText, { marginTop:'7%', marginBottom:'3%' }]}>Belum punya akun?</Text>
+        <Text style={[styles.normalItalicText, { marginTop:'7%', marginBottom:'3%', }]}>Belum punya akun?</Text>
         <Button
-          onPress={() => this.props.navigation.navigate('Register')}
+          onPress={() => navigate('Register')}
           style={styles.roundButton}
         >
           <Text style={styles.whiteButtonText} >Sign Up</Text>

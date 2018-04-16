@@ -4,7 +4,9 @@ import {
   Menu,
   Register,
   PersonalRegister,
-  PersonalDataRegister
+  PersonalDataRegister,
+  Signin,
+  CorporateRegister
 } from '../../screens/LoggedOut';
 
 export default StackNav = StackNavigator({
@@ -22,7 +24,13 @@ export default StackNav = StackNavigator({
   },
   PersonalDataRegister: {
     screen: PersonalDataRegister
+  },
+  Signin: {
+    screen: Signin
+  },
+  CorporateRegister: {
+    screen: CorporateRegister
   }
 }, {
-  initialRouteName: 'PersonalRegister'
+  initialRouteName: 'CorporateRegister'
 })

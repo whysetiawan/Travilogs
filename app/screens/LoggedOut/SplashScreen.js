@@ -16,7 +16,7 @@ import {
   deviceWidth,
   deviceHeight,
   colors
- } from '../../helpers/constants';
+} from '../../helpers/constants';
 
 export default class SplashScreen extends Component {
   static navigationOptions = () => ({
@@ -24,7 +24,7 @@ export default class SplashScreen extends Component {
   })
 
   componentDidMount(){
-    setTimeout(() => this.props.navigation.navigate('Menu'), 500)
+    setTimeout(() => this.props.navigation.navigate('Menu'), 3000)
   }
 
   render() {
