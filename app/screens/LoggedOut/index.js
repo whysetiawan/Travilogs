@@ -5,6 +5,7 @@ import PersonalRegister from './PersonalRegister';
 import PersonalDataRegister from './PersonalDataRegister';
 import Signin from './Signin';
 import CorporateRegister from './CorporateRegister';
+import CorporateRegister2 from './CorporateRegister2';
 
 export {
   SplashScreen,
@@ -13,5 +14,6 @@ export {
   PersonalRegister,
   PersonalDataRegister,
   Signin,
-  CorporateRegister
+  CorporateRegister,
+  CorporateRegister2
 }

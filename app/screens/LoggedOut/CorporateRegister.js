@@ -165,7 +165,7 @@ export default class CorporateRegister extends Component {
               </View>
             </View> 
 
-            <Button style={styles.smallBlueButton} onPress={() => navigate('PersonalDataRegister')} >
+            <Button style={styles.smallBlueButton} onPress={() => navigate('CorporateRegister2')} >
               <Text style={styles.whiteNormalText}>Lanjut</Text>
             </Button>
           </Card>

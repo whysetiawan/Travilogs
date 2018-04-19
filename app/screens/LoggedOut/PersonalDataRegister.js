@@ -128,7 +128,7 @@ export default class PersonalDataRegister extends Component {
             </View>
             <View style={{ marginTop:'5%' }}>
               <CheckBox
-                checked={this.state.agreement2}
+                checked={this.state.agreement1}
                 title="Saya Setuju dengan Syarat dan Ketentuan"
                 onPress={() => this.setState({ agreement1 : !this.state.agreement1 })}
                 textStyle={[styles.normalItalicText, { color: '#222', fontWeight: '100', fontSize: normalize(12) }]}

@@ -6,8 +6,11 @@ import {
   PersonalRegister,
   PersonalDataRegister,
   Signin,
-  CorporateRegister
+  CorporateRegister,
+  CorporateRegister2
 } from '../../screens/LoggedOut';
+import { Homepage } from '../../screens/LoggedIn/index';
+
 
 export default StackNav = StackNavigator({
   SplashScreen: {
@@ -30,7 +33,13 @@ export default StackNav = StackNavigator({
   },
   CorporateRegister: {
     screen: CorporateRegister
+  },
+  CorporateRegister2: {
+    screen: CorporateRegister2
+  },
+  Homepage: {
+    screen: Homepage
   }
 }, {
-  initialRouteName: 'CorporateRegister'
+  initialRouteName: 'Homepage'
 })

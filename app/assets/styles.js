@@ -15,6 +15,10 @@ export default styles = StyleSheet.create({
   bgPrimary: {
     backgroundColor: colors.primary
   },
+  rowSpaceBetweenDirection: {
+    flexDirection:'row',
+    justifyContent:'space-between'
+  },
   centerContainer: {
     flex:1,
     justifyContent: 'center',
@@ -179,6 +183,12 @@ export default styles = StyleSheet.create({
     borderBottomColor: colors.primary,
     width: '80%'    
   },
+  corporatePickerContainer2:{
+    borderBottomWidth:1,
+    borderBottomColor: colors.primary,
+    width: '100%',
+    marginBottom:'3%'
+  },
   corporatePickerStyle: {
     height: deviceHeight * 0.04,
     backgroundColor: 'transparent',
@@ -189,4 +199,39 @@ export default styles = StyleSheet.create({
     borderRadius:7,
     marginBottom:'3%'
   },
+  superTextHome: {
+    fontFamily:Avenir,
+    textAlign:'right',
+    fontSize: normalize(72),
+    color: colors.white
+  },
+  dashedContainer: {
+    alignSelf:'center',
+    paddingVertical: deviceHeight * 0.01,
+    paddingHorizontal: normalize(20),
+    borderWidth: 1,
+    borderStyle: 'dashed',
+    borderRadius: 15,
+    borderColor: colors.white
+  },
+  defaultCard: {    
+    marginHorizontal:'1.5%',
+    borderRadius:7,
+    padding:'5%'
+  },
+  homeYellowButton : {    
+    backgroundColor: colors.yellow,
+    borderWidth:1,
+    borderColor: colors.primary,
+    borderRadius: 4,
+    alignItems:'center',
+    justifyContent:'center',
+    width:'80%',
+    paddingVertical: deviceHeight * 0.01,
+    alignSelf:'center'
+  },
+  homeContentContainer: {
+    marginTop: deviceHeight * 0.15,
+    paddingHorizontal: '10%'
+  }
 })
