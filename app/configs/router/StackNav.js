@@ -9,7 +9,11 @@ import {
   CorporateRegister,
   CorporateRegister2
 } from '../../screens/LoggedOut';
-import { Homepage } from '../../screens/LoggedIn/index';
+import {
+  Homepage,
+  SetSchedule,
+  SearchResult
+} from '../../screens/LoggedIn/index';
 
 
 export default StackNav = StackNavigator({
@@ -39,6 +43,12 @@ export default StackNav = StackNavigator({
   },
   Homepage: {
     screen: Homepage
+  },
+  SearchResult: {
+    screen: SearchResult
+  },
+  SetSchedule: {
+    screen: SetSchedule
   }
 }, {
   initialRouteName: 'Homepage'

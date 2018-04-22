@@ -10,9 +10,10 @@ const deviceHeight = width < height ? height : width;
 
 
 const colors = {
-  primary: '#1e88e5',
+  primary: '#2ea1ec',
   white: '#ffffff',
-  yellow: '#e2ff06'
+  yellow: '#e2ff06',
+  gray: '#c3c3c3'
 }
 
 export {

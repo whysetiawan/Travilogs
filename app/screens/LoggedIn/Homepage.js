@@ -20,8 +20,9 @@ import styles from '../../assets/styles';
 import Button from '../../components/Button';
 import { Card, normalize, Avatar, FormInput } from "react-native-elements";
 import Icon from 'react-native-vector-icons/Ionicons';
+import RoundedIcon from '../../components/RoundedIcon';
 
-
+const lorem = 'Lorem Ipsum sit dolor amet'
 
 export default class Homepage extends Component {
   
@@ -52,8 +53,9 @@ export default class Homepage extends Component {
   })
   
   render(){
+    const { navigate } = this.props.navigation;
     return (
-      <ScrollView style={{ minHeight: deviceHeight }}>
+      <ScrollView>
         <View style={[styles.container, styles.bgPrimary]}>
           <ImageBackground
             source={require('../../assets/images/background-home.png')}
@@ -61,7 +63,7 @@ export default class Homepage extends Component {
             resizeMethod='resize'
             resizeMode='stretch'
           >
-            <View style={{ height: '100%', backgroundColor: 'rgba(0,0,0, 0.5)' }}>
+            <View style={styles.overlaysContainer}>
               <View style={styles.rowDirection}>
                 <View style={{ width:'50%' }}>
                   <Text style={styles.superTextHome}>75%</Text>
@@ -69,7 +71,7 @@ export default class Homepage extends Component {
                 <View style={{ width:'50%', justifyContent:'center' }}>
                   <Text style={styles.whiteNormalText}>
                     <Text>Potongan Pengiriman{'\n'}</Text>
-                    <Text  style={{ fontWeight:'bold', fontSize: normalize(16) }}>Dengan Menggunakan {'\n'}MERATUS</Text>
+                    <Text style={styles.boldTitleText}>Dengan Menggunakan {'\n'}MERATUS</Text>
                   </Text>
                 </View>
               </View>
@@ -81,30 +83,47 @@ export default class Homepage extends Component {
           </ImageBackground>
           <Card containerStyle={[styles.defaultCard, { bottom: deviceHeight * 0.07 }]} >
             <Text style={styles.blueTextNormalSize}>Kota Asal</Text>
-            <View style={{ borderWidth:1, borderColor: colors.primary }}>
+            <View style={styles.blueBorderContainer}>            
               <TextInput
                 style={styles.blueButtonText}
                 underlineColorAndroid='transparent' />
             </View>
             
             <Text style={[styles.blueTextNormalSize, { marginTop: 15 }]}>Tujuan</Text>
-            <View style={{ borderWidth:1, borderColor: colors.primary }}>
+            <View style={styles.blueBorderContainer}>
               <TextInput
                 style={styles.blueButtonText}
                 underlineColorAndroid='transparent' />
             </View>
-            <Button onPress={() => alert('search')} style={[styles.homeYellowButton, { marginTop: deviceHeight * 0.03, }]}>
+            <Button onPress={() => navigate('SearchResult')} style={[styles.homeYellowButton, { marginTop: deviceHeight * 0.03, }]}>
               <Icon name="md-search" color={colors.primary} size={normalize(18)} ><Text style={styles.blueTextNormalSize}> Cek Pengiriman </Text> </Icon>
             </Button>
           </Card>
           <View style={styles.homeContentContainer}>
             <View style={styles.rowDirection}>
-              <ImageBackground
-                style={{ width:'50%', height: deviceHeight * 0.1 }}
-                source={require('../../assets/images/ship-icon.png')} >
-
-              </ImageBackground>
+              <View style={{ width:'50%', alignItems:'center' }} >
+                <RoundedIcon
+                  style={styles.roundedIconContainer}
+                  source={require('../../assets/images/ic_kapal.png')}
+                />
+                <Text style={styles.smallWhiteText}>SHIPPING CONTAINER</Text>
+                <Text style={[styles.smallWhiteText, { fontSize: normalize(10) }]}>{lorem}</Text>
+              </View>
+              <View style={{ width:'50%', alignItems:'center' }} >
+                <RoundedIcon
+                  style={styles.roundedIconContainer}
+                  source={require('../../assets/images/ic_truck.png')}
+                />
+                <Text style={styles.smallWhiteText}>TRUCKING SERVICE</Text>
+                <Text style={[styles.smallWhiteText, { fontSize: normalize(10) }]}>{lorem}</Text>                
+              </View>
             </View>
+            <RoundedIcon
+              style={[styles.roundedIconContainer, { marginTop: deviceHeight * 0.05 }]}
+              source={require('../../assets/images/ic_kapal_truck.png')}
+            />
+            <Text style={styles.smallWhiteText}>TRUCKING AND SHIP</Text>
+            <Text style={[styles.smallWhiteText, { fontSize: normalize(10) }]}>{lorem}</Text>   
           </View>
         </View>
       </ScrollView>

@@ -98,7 +98,7 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 5,
     backgroundColor: colors.primary,
-    paddingHorizontal: deviceWidth * 0.05,
+    paddingHorizontal: deviceWidth * 0.1,
     paddingVertical: deviceHeight * 0.0125,
     height: deviceHeight * 0.06,
     alignSelf:'center',
@@ -231,7 +231,122 @@ export default styles = StyleSheet.create({
     alignSelf:'center'
   },
   homeContentContainer: {
-    marginTop: deviceHeight * 0.15,
-    paddingHorizontal: '10%'
+    marginTop: deviceHeight * 0.1,
+    marginBottom: deviceHeight * 0.05,
+    alignItems: 'center'
+  },
+  overlaysContainer: {
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0, 0.5)'
+  },
+  boldTitleText: {
+    fontWeight:'bold',
+    fontSize: normalize(16)
+  },
+  blueBorderContainer: {
+    borderWidth:1,
+    borderColor: colors.primary
+  },
+  roundedIconContainer : {
+    height: deviceHeight * 0.125 ,
+    width:deviceHeight * 0.125,
+    borderRadius: deviceHeight * 0.125,
+    borderWidth: 5,
+    alignItems:'center',
+    justifyContent: 'center',
+    borderColor: colors.white
+  },
+  smallWhiteText: {
+    fontSize: normalize(12),
+    fontFamily: Avenir,
+    color: colors.white
+  },
+  vsmallBlueBoldText: {
+    fontSize: normalize(10),
+    fontFamily: Avenir,
+    color: colors.primary,
+    fontWeight: 'bold'
+  },
+  semiBigWhiteText: {    
+    fontSize: normalize(18),
+    color: colors.white,
+    fontFamily: 'Avenir Medium'
+  },
+  semiBigBlueText: {    
+    fontSize: normalize(16),
+    color: colors.primary,
+    fontFamily: 'Avenir Medium'
+  },
+  searchResultsContainer: {
+    padding:'2%',
+    height: deviceHeight * 0.13,
+    flexDirection:'row',
+  },
+  searchResultsWrapperRowContainer: {
+    width: '25%',
+    flexDirection:'row',
+    justifyContent: 'space-around'
+  },
+  defaultSmallText: {
+    fontSize: normalize(12),
+    fontFamily: Avenir
+  },
+  searchResultsWrapperContainer2: {
+    width:'55%',
+    justifyContent:'center'
+  },
+  searchResultsWrapperContainer3: {
+    width:'20%',
+    alignItems: 'flex-end'
+  },
+  headerSetSchedule: {
+    backgroundColor: '#1e88e5',
+    height: deviceHeight * 0.08,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  headerSetSchedule2: {
+    backgroundColor: colors.primary ,
+    height: deviceHeight * 0.08,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  whiteBoldNormalText :{    
+    fontFamily: Avenir,
+    fontSize: normalize(14),
+    color: colors.white,
+    fontWeight: 'bold'
+  },
+  stepsPrimary: {
+    height: deviceHeight * 0.05,
+    width: deviceHeight * 0.05,
+    borderRadius: deviceHeight * 0.05,
+    backgroundColor: colors.primary,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  stepsGray: {
+    height: deviceHeight * 0.05,
+    width: deviceHeight * 0.05,
+    borderRadius: deviceHeight * 0.05,
+    backgroundColor: colors.gray,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  stepsContainer: {
+    marginVertical:'3%',
+    justifyContent:'center',
+    alignItems:'center',
+    flexDirection: 'row'
+  },
+  borderedButtonPrimary: {
+    borderWidth: 1,
+    borderColor: colors.primary,
+    padding: 3 ,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   }
 })
