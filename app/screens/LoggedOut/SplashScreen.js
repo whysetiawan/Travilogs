@@ -10,21 +10,21 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
 } from 'react-native';
-import { 
+import {
   deviceWidth,
   deviceHeight,
-  colors
+  colors,
 } from '../../helpers/constants';
 
 export default class SplashScreen extends Component {
   static navigationOptions = () => ({
-    header: null
+    header: null,
   })
 
-  componentDidMount(){
-    setTimeout(() => this.props.navigation.navigate('Menu'), 3000)
+  componentDidMount() {
+    setTimeout(() => this.props.navigation.navigate('Menu'), 3000);
   }
 
   render() {
@@ -32,9 +32,9 @@ export default class SplashScreen extends Component {
       <View style={styles.container}>
         <Image
           source={require('../../assets/images/splashscreen.png')}
-          style={{ width: '100%' , height: '100%' }}
-          resizeMethod='resize'
-          resizeMode='cover'
+          style={{ width: '100%', height: '100%' }}
+          resizeMethod="resize"
+          resizeMode="cover"
         />
       </View>
     );

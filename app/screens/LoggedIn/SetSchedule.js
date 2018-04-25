@@ -19,7 +19,7 @@ import {
 } from '../../helpers/constants';
 import styles from '../../assets/styles';
 import Button from '../../components/Button';
-import { Card, normalize, Avatar, FormInput } from "react-native-elements";
+import { Card, normalize, Avatar, FormInput, CheckBox } from "react-native-elements";
 import Icon from 'react-native-vector-icons/Ionicons';
 import RoundedIcon from '../../components/RoundedIcon';
 
@@ -84,12 +84,12 @@ export default class SetSchedule extends Component {
               style={styles.stepsPrimary}
               source={require('../../assets/images/ic_kapal.png')}
             />
-            <View style={{ width:'25%', height:'5%', borderWidth: 1, borderColor: colors.gray }}/>
+            <View style={styles.stepsLine}/>
             <RoundedIcon
               style={styles.stepsGray}
               source={require('../../assets/images/ic_truck.png')}
             />
-            <View style={{ width:'25%', height:'5%', backgroundColor: '#ccc' }}/>
+            <View style={styles.stepsLine}/>
             <RoundedIcon
               style={styles.stepsGray}
               source={require('../../assets/images/ic_truck.png')}
@@ -163,7 +163,23 @@ export default class SetSchedule extends Component {
                   style={styles.blueTextNormalSize}
                   underlineColorAndroid='transparent' />
               </View>
-            <Button style={[styles.smallBlueButton, { marginTop:'10%' }]} onPress={() => navigate('SetSchedule')} >
+
+              
+
+            <View style={{ marginTop: '10%' }}>
+              <CheckBox
+                title={<Text style={[styles.blueTextNormalSize, { marginLeft:'2%' }]}>COC </Text> }
+                textStyle={[styles.normalItalicText, { color: '#222', fontWeight: '100', fontSize: normalize(12) }]}
+                containerStyle={{ backgroundColor: 'transparent', borderWidth:0, padding:0, margin:0  }}
+              />
+              <CheckBox
+                title={<Text style={[styles.blueTextNormalSize, { marginLeft:'2%' }]}>Kontainer Pendingin, <Text style={{ color: '#CCCCCC' }}>Untuk memuat barang yang membutuhkan pendingin</Text> </Text> }
+                textStyle={[styles.normalItalicText, { color: '#222', fontWeight: '100', fontSize: normalize(12) }]}
+                containerStyle={{ backgroundColor: 'transparent', borderWidth:0, padding:0, margin:0  }}
+              />
+            </View>
+
+            <Button style={[styles.smallBlueButton, { marginTop:'10%' }]} onPress={() => navigate('ShipResult')} >
               <Text style={styles.whiteNormalText}>CARI</Text>
             </Button>
           </View>

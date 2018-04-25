@@ -12,7 +12,8 @@ import {
 import {
   Homepage,
   SetSchedule,
-  SearchResult
+  SearchResult,
+  ShipResult
 } from '../../screens/LoggedIn/index';
 
 
@@ -49,6 +50,9 @@ export default StackNav = StackNavigator({
   },
   SetSchedule: {
     screen: SetSchedule
+  },
+  ShipResult: {
+    screen: ShipResult
   }
 }, {
   initialRouteName: 'Homepage'
